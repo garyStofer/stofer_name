@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Home</title>
+<style type="text/css"></style>
+<!-- #EndEditable -->
+<link href="Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead"> 
+		<img alt="The need for speed" src="images/RV-Heading.jpg" width="900" height="125" />
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul id="navigation_list">
+			<li><a href="index.htm">Home</a></li>
+			<li><a href="SW_proj.htm">Software projects</a></li>
+			<li><a href="HW_proj.htm">Hardware projects</a></li>
+			<li><a href="PWS.htm">Weather Stations</a> </li>
+			<li><a href="Current_proj.htm">Fluid Sensor</a></li>
+			<li><a href="QCproj.htm">Quadra Copter</a></li>
+			<li></li>
+
+			<li><a href="AV_proj.htm">Aircraft projects</a></li>
+			<li><a href="weather.htm">Aviation Weather </a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a href="resume.htm">Resume</a></li>
+			<li><a href="contact.htm">Contact</a></li>
+
+	 		<!--<a href="http://64.85.240.249/">Home Automation </a>-->
+		</ul>
+	</div>
+	<div id="content" >
+		<!-- #BeginEditable "content" -->
+		
+		<div id="Scroll" >
+		
+		
+		<h4>What&#39;s a Quadra Copter anyway?</h4>
+		<p>A QC could best be described as 
+		<a href="http://picasaweb.google.com/GaryStofer/UFO?authkey=Gv1sRgCI63xvyv7ZP4rAE&amp;feat=directlink">a four bladed helicopter</a> that flies 
+		and hovers by producing vertical thrust with each of it&#39;s 4 rotors. </p>
+		<p>The device maneuvers by varying the thrust ratio between pairs of 
+		rotors. While a helicopter needs a tail rotor to arrest the torque 
+		moment of the main blade a QC uses a pair of clock wise and a pair of 
+		counter clock wise rotating blades to cancel the torque moments. 
+		Therefore all energy goes into lift.&nbsp; The craft can yaw by changing 
+		the trust ratio between CW and CCW pairs or rotors. Thrust of each blade 
+		is modulated by varying the RPM of each motor. </p>
+		<p>The simplicity of the design however comes with a price, the 
+		contraption is extremely unstable. Trying to control it manually is like 
+		trying to balance a marble on top of a large glass sphere.
+		<img alt="QC hovering " src="images/CIMG0261.JPG" width="280" height="210" class="pic_style1" /> 
+		There is simply no chance to even get it a foot of the ground without 
+		flipping it over.&nbsp;
+		</p>
+		<p>To provide stability 3 MEMS gyros and 3 
+		Accelerometers are used along with a MCU. The gyros are solid state rate 
+		sensors and provide the main input to the PID loops that stabilize the 
+		hovering platform.&nbsp; While it is possible to use a triad of gyros 
+		only, thermal drift of the devices and quantization errors in the ACD&#39;s 
+		eventually add up in the integration of the rate signal to deck angles, 
+		which in term cause the craft to drift.&nbsp;&nbsp;&nbsp; </p>
+		<p>The role of the accelerometers therefore is to provide drift 
+		compensation for long term stability. This is done by looking at the 
+		gravity vector and correcting the roll and pitch angles while hovering 
+		in a narrow range around level. This scheme works relatively well, 
+		however a Kalman filter approach certainly would provide better results 
+		in corner case situations, but with an 8 bit PIC running at 8 mips 
+		that&#39;s simply not an option. The next version of the controller will be 
+		based on a TI or ATMEL part with floating point instructions 
+		undoubtedly.</p>
+		<p>Here is some footage of 
+		the craft in flight. You notice the tether going to a stationary 
+		battery. This initially helped a great deal with keeping the craft from 
+		&quot;departing&quot; the yard and getting itself stuck in a tree. After the 
+		initial testing of the HW and SW the tether was replaced by a 2200mah 
+		LiPoly battery. It provides for about 15-20 minutes of hovering when the 
+		craft is light. A 40000mah pack is needed for the same duration when the 
+		digital camera is going along for the ride. </p>
+		<object width="400" height="300"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4464500&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=4464500&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="300"></embed></object><p><a href="http://vimeo.com/4464500">Pool takeoff and landing</a> from <a href="http://vimeo.com/user1421623">Gary Stofer</a> on <a href="http://vimeo.com">Vimeo</a>.</p><p>Some of the issues to overcome in the next design have to do with 
+		vibrations of the motors/propellers and coupling of it back into the 
+		gyros. When the motors RPMs are modulated to keep the craft steady the 
+		RPMs of the individual motors keep crossing each other. If there is any 
+		vibration from the individual motors and the motors transmit that 
+		vibration into the frame, the two frequency mix and form a product 
+		that&#39;s the difference of the two. This beat frequency is then picked up 
+		by the rate sensors to produce a false reading. It can&#39;t be filtered out 
+		as it&#39;s frequency is in the range of motion that we want to detect with 
+		the rate sensors in the first place. The next design of a the HW will 
+		include some damping in the motor mounts and a frame that doesn&#39;t 
+		transmit so well. </p>
+		<p>Generally this has been a very fun and educational project. I 
+		initially started it because I wanted a cheaper, more efficient way to 
+		take aerial pictures. I leveraged of the work of a group of modelers in 
+		Europe who sell the blank PCB pictured below along with having their 
+		firmware in the public domain. Unfortunately the PCB had many electrical 
+		issues and the software suffered from the &quot;too many cooks&quot; syndrome.&nbsp; 
+		I eventually ended up rewriting the firmware on a more modern and faster 
+		PIC and I will undoubtedly have to redesign the board to switch to a 
+		better controller before I can get serious with trying to take aerial 
+		pictures for money again.</p>
+		<p>
+		<img alt="QC PCB with PIC" longdesc="QC PCB with pic 18F2540, 3x Melxis gyros and 3 axis Accel" src="images/CIMG0249.JPG" width="300" height="225" /></p>
+		</div>
+		
+		<!-- #EndEditable "content" -->
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<!-- End Content -->
+	
+	<!-- Begin Footer -->
+	<!-- End Footer -->
+	<div id="footer" >
+		<a href="index.htm">Home</a>&nbsp; <a href="contact.htm">
+		Contact</a>
+	</div>
+	</div> 
+<!-- End Container -->
+
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

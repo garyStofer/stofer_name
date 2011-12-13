@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Home</title>
+<!-- #EndEditable -->
+<link href="Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead"> 
+		<img alt="The need for speed" src="images/RV-Heading.jpg" width="900" height="125" />
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul id="navigation_list">
+			<li><a href="index.htm">Home</a></li>
+			<li><a href="SW_proj.htm">Software projects</a></li>
+			<li><a href="HW_proj.htm">Hardware projects</a></li>
+			<li><a href="PWS.htm">Weather Stations</a> </li>
+			<li><a href="Current_proj.htm">Fluid Sensor</a></li>
+			<li><a href="QCproj.htm">Quadra Copter</a></li>
+			<li></li>
+
+			<li><a href="AV_proj.htm">Aircraft projects</a></li>
+			<li><a href="weather.htm">Aviation Weather </a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a href="resume.htm">Resume</a></li>
+			<li><a href="contact.htm">Contact</a></li>
+
+	 		<!--<a href="http://64.85.240.249/">Home Automation </a>-->
+		</ul>
+	</div>
+	<div id="content" >
+		<!-- #BeginEditable "content" -->
+		
+<div id="Scroll" >
+<h1><span class="pic_style1">Weather Stations </span> <br /> </h1>
+Custom PIC based station with Temp and Wind data updating every 15 seconds.<br />
+<br />
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+<p>Click on the displays above to see charted station details. </p>
+<p>Click <a href="http://66.234.194.167/">here </a>to go to see the&nbsp;
+<a href="http://66.234.194.167/">local interface</a> of the device </p>
+<hr/>
+<p> The wind sensors are all solid state using a hall effect devices instead of 
+reed relay switches and potentiometers as found in the commercially available 
+Davis Instrument weather stations.
+</p>
+<p> For the anemometer&nbsp; a 14 pole magnet housing&nbsp; and a&nbsp; bipolar 
+Hall effect switch is used, giving 6 pulses per revolution. This in conjunction 
+with the ball bearings used allows&nbsp; the capturing of wind speeds down to 
+about 0.5Mph. The magnet / bearing assembly is actually a RC model&nbsp; DC 
+motor with it&#39;s iron armature removed to provide smooth action.&nbsp;
+	<img alt="WX station sensor tree " src="wx_pix/CIMG0719.JPG" width="280" height="210" class="pic_style1" /> 
+</p>
+<p> The wind vane is&nbsp; based on a magnetic rotary encoder which is made off 
+4 hall effect units, producing a pulse width modulated signal that&#39;s directly 
+proportional to the direction of magnetic flux over the device. The chosen 
+device has a resolution of 1.4 deg (8 bits) , more than enough for wind 
+direction. The vane is mounted in a roller bearing and also reacts to wind less 
+than 1 Mph. as long as the bearings stay clean of corrosion and debris.&nbsp; 
+Time will tell !</p>
+<p> The 3rd device&nbsp; on the sensor&nbsp; tree is a CIGS solar panel that 
+measures the solar radiation during the day. I find this information useful as 
+it indirectly shows cloud cover along with sunrise and sunset.&nbsp;
+</p>
+<p> The Barometer sensor is mounted on the&nbsp; controller PCB. A standard&nbsp; pressure sensor from FreeScale, feeding an ADC input of the PIC, 
+is used.
+</p>
+<p> The Temperature sensor is an LM334 remote temperature probe which feeds 
+directly into an analog input of the PIC as well.
+</p>
+<p> Humidity is measured with a Honywell HIH4030 calibrated humidity sensor.
+</p>
+<p> The <a href="server.htm">controller board</a> is an SBC65 or SBC68 from an Australian company Modtronix. It has a PIC 18F1680 and a RTL8019 MAC.
+ It&#39;s using the free TCIP/IP 
+stack from Microchip with extension to act as an HTTP client and server.
+</p>
+<p> The advantage of using an embedded device instead of a weather station / PC 
+combination is that this setup only uses about 3W to operate and is absolutely 
+quiet, and of course it is much more rewarding when you can say you made it 
+yourself.
+</p>
+<p>
+<hr/>
+<img src="wx_pix/CIMG2920.JPG" width="640" height="480" />
+<img src="wx_pix/CIMG2923.JPG" width="640" height="480" />
+<img src="wx_pix/CIMG2921.JPG" width="640" height="480"  />
+<img src="wx_pix/CIMG2922.JPG" width="640" height="480"  />&nbsp;
+</p>
+</div>
+
+
+		<!-- #EndEditable "content" -->
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<!-- End Content -->
+	
+	<!-- Begin Footer -->
+	<!-- End Footer -->
+	<div id="footer" >
+		<a href="index.htm">Home</a>&nbsp; <a href="contact.htm">
+		Contact</a>
+	</div>
+	</div> 
+<!-- End Container -->
+
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

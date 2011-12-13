@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Hardware Projects</title>
+<style type="text/css">
+.pic_style1 {
+	margin-top: 10px;
+}
+</style>
+<!-- #EndEditable -->
+<link href="Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead"> 
+		<img alt="The need for speed" src="images/RV-Heading.jpg" width="900" height="125" />
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul id="navigation_list">
+			<li><a href="index.htm">Home</a></li>
+			<li><a href="SW_proj.htm">Software projects</a></li>
+			<li><a href="HW_proj.htm">Hardware projects</a></li>
+			<li><a href="PWS.htm">Weather Stations</a> </li>
+			<li><a href="Current_proj.htm">Fluid Sensor</a></li>
+			<li><a href="QCproj.htm">Quadra Copter</a></li>
+			<li></li>
+
+			<li><a href="AV_proj.htm">Aircraft projects</a></li>
+			<li><a href="weather.htm">Aviation Weather </a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a href="resume.htm">Resume</a></li>
+			<li><a href="contact.htm">Contact</a></li>
+
+	 		<!--<a href="http://64.85.240.249/">Home Automation </a>-->
+		</ul>
+	</div>
+	<div id="content" >
+		<!-- #BeginEditable "content" -->
+		
+		<div id="Scroll" >
+		<h4>Some projects I have been working on in the past.</h4>
+		<h5>PRISM </h5>
+		<hr/>
+		<p >
+		A DSP based analog stimulus and measurement instrument used in In-Circuit 
+		test equipment. It features dual analog stimulus of 
+		<img src="images/PRISM_bd.jpg" style=" margin-left: 14px; margin-right: 5px; margin-bottom: 0px;" height="180" class="pic_style1"  />
+		programmable frequency voltage and current. It's measurement 
+		capability reach down into the pico amps and nano volt ranges. 
+		As one can imagine this can be tricky when operating near 
+		&quot;magnetically&quot; active devices such as transformers&nbsp; and solenoids.</p>
+		<p style="text-align: left">
+		To fully exploit the potential of the device careful attention had to be 
+		given to any and all potential sources of noise in it&#39;s vicinity. It was 
+		therefore not surprising that a large effort was spent on eradicating 
+		such gremlins, either by re-designing&nbsp;or relocating sub-systems to 
+		reduce the&nbsp;EMF smog&nbsp; in it&#39;s environment.</p>
+		<p>
+		On the hardware side I was responsible for the logic around 
+		the DSP, the communication interface to the PC and the memory 
+		arbitration between DSP and ADC, DAC and PC DMA, mainly the stuff that 
+		went into the three big Altera chips on the bottom of the picture.</p>
+		<p>
+		On the Software side I was responsible for all of the DSP code as well 
+		as the PC side that communicated with it. Click here to lock at 
+		<a href="Samples%20of%20work/Altera%20AHDL%20projects.zip">example code</a> or take a look at the 
+		<a href="Samples%20of%20work/Altera%20AHDL%20projects.zip">Hardware description langue</a> used. 
+		
+ </p>
+		<h5>
+		PCIO</h5> <hr/>
+		<p>
+		This board is the communication interface between the PC and the rest of 
+		the test and measurement system. It&#39;s a PCI based adapter that had to be 
+		compatible with a former ISA bus implementation, as well as with 
+		multiple target devices in addition to also provide improved throughput 
+		and reduced susceptibility to interference.
+		 The 
+		interface basically extends a local bus from the PCI to the 
+		instrumentation by providing an mapping of a&nbsp; 4K window into the target 
+		device&#39;s address space.&nbsp; 
+		</p>
+		<p>
+		<img alt="" src="images/PCIO_card.jpg" width="239" height="155" style="margin-left: 19px" />
+		I got stated on this board as a side project with the help of the HW 
+		engineering manager who insisted that I was a honorary HW engineer in 
+		spite my &quot;software&quot; job title. While he did all the hard stuff around 
+		the line terminations, cross talk, reflections and EMI I was doing all 
+		the fun parts with the digital design and schematic capture etc...&nbsp; 
+		The logic was done in AHDL and I simulated the design&nbsp; while the board was in layout 
+		and fab. This paid out in that the board had not a single HW ECO&#39;s and only 
+		some minor 
+		changes to the AHDL programming where necessary in the areas that could not 
+		be simulated beforehand. 
+		
+ </p>
+		<h5>DFPIO</h5><hr/>
+		<p> 
+		<img alt="" src="images/DFPIO.jpg" style="height: 145px; width: 250px"  />
+		This is an other PCI based communication and control adapter used in 
+		test and measurement systems. It is used to drive pin electrics so that 
+		the address and data bus of the PC can be used to communicate and 
+		simulate peripherals and CPUs in a testing environment The&nbsp; card 
+		also features a JTAG engine for communication&nbsp; via Boundary Scan 
+		and to program FLASH device in situ.</p>
+		<p>
+		
+		<h5>Lightning, Drag Race Starting Line Controller </h5>
+		<hr/>
+		<p>This device is used in 1/4 mile drag racing and provides the racer 
+		with an accurate timing device to get the car rolling at exact the right 
+		time. It hooks up to a trigger switch that the racer operates and 
+		controls the cars throttle and brake. The aim is to get the car rolling 
+		at EXACTLY the moment when the green light appears on the starting 
+		light. To achieve this the racer triggers the device multiple times 
+		during the starting sequence when the pre starting lights count down to 
+		the green. Since the timing of the starting light count down is know the 
+		human reaction and the vehicles inertia factor can be removed by 
+		subtracting a know reaction time for the particular racer and vehicle 
+		involved. </p>
+		<p>This device is using an 8051 type of MCU and the programming is done 
+		exclusively in assembler. &nbsp;I did extensive rework on the SW of this 
+		device including redoing the user interface (keypad and LCD) as well a 
+		adding features and removing bugs.&nbsp; Later I worked on the HW design 
+		of a new version of the product where I got t do the schematic, Spice sim and layout of the board.&nbsp; 
+		I hear the new design sold very well !</p>
+		<p>
+		<img alt="" src="images/Lightning.JPG" width="400" height="175" style="float: none" />&nbsp;</p>
+		<p>
+		&nbsp;</p>
+		</div>
+		
+		<!-- #EndEditable "content" -->
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<!-- End Content -->
+	
+	<!-- Begin Footer -->
+	<!-- End Footer -->
+	<div id="footer" >
+		<a href="index.htm">Home</a>&nbsp; <a href="contact.htm">
+		Contact</a>
+	</div>
+	</div> 
+<!-- End Container -->
+
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

@@ -1,0 +1,393 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Aviation Weather Page</title>
+<SCRIPT Language="JavaScript">
+ function gmtClock(){
+    time = new Date()
+    gmtMS = time.getTime() + (time.getTimezoneOffset() * 60000)
+    gmtTime =  new Date(gmtMS)
+    hour = gmtTime.getHours()
+    minute = gmtTime.getMinutes()
+    second = gmtTime.getSeconds()
+    temp = "" + ((hour < 10) ? "0" : "") + hour
+    temp += ((minute < 10) ? ":0" : ":") + minute
+    temp += ((second < 10) ? ":0" : ":") + second
+    document.clockForm.digits.value = temp
+    setTimeout("gmtClock()",1000)
+    }  
+
+ </SCRIPT>
+
+
+<style type="text/css">
+.style1 {
+	text-align: center;
+}
+</style>
+
+
+</head>
+
+<body ONLOAD="gmtClock()" topmargin="2" leftmargin="2" bgcolor="#FFFFcc">
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200pt" valign="top" height="121"><br>
+    <h1>USA Weather</h1><br>
+	</td>
+    
+    <td align="center" style="width: 120pt">
+      	<FORM NAME="clockForm">
+ 		<h3> GMT</h3>
+ 		<INPUT TYPE="text" NAME="digits" SIZE=8>
+ 		<br>
+ 		</FORM>
+ 	<td align="left" style="width: 60%">Example:
+ 	<p>
+ 	<strong>00:00 GMT</strong> is 17:00 PDT,&nbsp; 18:00 MDT,&nbsp; 9:00 CDT&nbsp; on <strong>previous</strong> day<br>
+ 	<strong>12:00 GMT</strong> is 05:00 PDT,&nbsp; 06:00 MDT,&nbsp; 07:00 CDT on same day<br>
+ 	</p>
+ 	</td>	
+  </tr>
+</table>
+<hr>
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=MGRSC1&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=MGRSC1&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+<img src="images/bluespacer.gif" width="2" height="130" border="0"><img src="images/bluespacer.gif" width="2" height="130" border="0">
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+<img src="images/bluespacer.gif" width="2" height="130" border="0">
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object><hr>
+<table border="0" width="23%" align="left">
+  <tr>
+    <td width="100%">
+<p>Current Weather observations:</p>
+<p>
+      <b><font face="Arial" size="2" color="#FF0000">
+      	NOAA ADDS:
+		<a href="http://adds.aviationweather.gov/metars/java/">METAR</a>&nbsp;
+		<a href="http://adds.aviationweather.gov/tafs/java/">TAF</a><br/>
+     	NOAA METAR/RAWS:
+     	<a href="http://www.wrh.noaa.gov/zoa/mwmap2.php?map=zoa">ZOA</a>
+		<a href="http://www.wrh.noaa.gov/zoa/mwmap3.php?map=usa">USA</a>
+		</font></b>
+		<hr>
+		</p>
+<p align="center">
+		Now:<br/>
+		<a href="http://www.duats.com/graphics/graphics/sfwxcur.gif">
+		<img border="1" src="http://www.duats.com/graphics/graphics/sfwxcur.gif" width="280" height="214"></a><br>
+		+12Hr forecast:
+		<a href="http://www.duats.com/graphics/sfwx12.html">
+<img height="211" src="http://www.duats.com/graphics/graphics/sfwx12h.gif" width="278"></a><br>
+		+24Hr forecast:
+		<a href="http://www.duats.com/graphics/sfwx24.html">
+<img height="211" src="http://www.duats.com/graphics/graphics/sfwx24h.gif" width="277"></a><br>
+		+36 Hr forecast:
+		<a href="http://www.duats.com/graphics/sfwx36.html">
+<img height="209" src="http://www.duats.com/graphics/graphics/sfwx36h.gif" width="279"></a><br>
+		+48Hr forecast:
+		<a href="http://www.duats.com/graphics/sfwx48.html">
+<img height="210" src="http://www.duats.com/graphics/graphics/sfwx48h.gif" width="276"></a><br>
+		+72Hr forecast:
+		<a href="http://www.duats.com/graphics/sfwx722x.html">
+<img border="0" src="http://www.duats.com/graphics/graphics/sfwx72h.gif" width="278" height="210"></a><p align="center">
+                    
+
+      <b><font face="Arial" size="2">Current Weather<br>
+      </font></b><font face="Arial" size="1"><i>click to enlarge</i></font><br>
+      <a href="http://www.hpc.ncep.noaa.gov/sfc/satsfcnps.gif"><img border="2" src="http://www.hpc.ncep.noaa.gov/sfc/satsfcnps_sm.jpg" width="150" height="112"></a>
+
+
+<p align="center"><font face="Arial" size="2"><b>Regional METAR Plots:<br>
+      </b></font><font face="Arial" size="1"><i>click on identifier on image
+below for detailed plot<br>
+<map name="FPMap0">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_lws.gif" shape="rect" coords="24, 11, 60, 34">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_wmc.gif" shape="rect" coords="8, 38, 52, 67">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_las.gif" shape="rect" coords="12, 73, 63, 98">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_cod.gif" shape="rect" coords="62, 31, 93, 49">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_den.gif" shape="rect" coords="67, 56, 104, 77">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_abq.gif" shape="rect" coords="65, 84, 98, 104">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_pir.gif" shape="rect" coords="95, 30, 126, 48">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_msp.gif" shape="rect" coords="127, 26, 160, 43">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_ict.gif" shape="rect" coords="106, 72, 135, 89">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_aus.gif" shape="rect" coords="101, 106, 139, 132">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_lit.gif" shape="rect" coords="132, 90, 159, 103">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_dtw.gif" shape="rect" coords="166, 41, 195, 58">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_evv.gif" coords="150, 67, 184, 84" shape="rect">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_alb.gif" shape="rect" coords="205, 32, 246, 56">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_bwi.gif" shape="rect" coords="192, 62, 238, 79">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_clt.gif" shape="rect" coords="179, 87, 211, 99">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_mgm.gif" shape="rect" coords="158, 104, 194, 121">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_tpa.gif" shape="rect" coords="182, 125, 212, 141">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_ina.gif" shape="rect" coords="56, 141, 236, 163">
+<area href="http://adds.aviationweather.gov/data/metars/sfc_pak.gif" shape="rect" coords="14, 116, 44, 142"></map>
+<img border="0" src="images/WxUSA_imagemap.gif" usemap="#FPMap0" width="254" height="164"><br>
+</i>This map and much more information can be found on the excellent <a href="http://adds.aviationweather.gov/"><font color="#0000FF">ADDS
+site</font></a>.</font>
+
+<p align="center">
+                    
+
+      <form ACTION="http://weather.noaa.gov/cgi-bin/mgetmetar.pl" METHOD="POST">
+                      <div align="center"><p align="center"><b><font face="Arial" size="3">
+                        &nbsp;METAR reports<br>
+                        </font></b><font face="Arial" size="1"><input SIZE="12" NAME="cccc"><input TYPE="SUBMIT" VALUE="Go"></font></p>
+                      </div>
+                    </form>
+
+                    <form ACTION="http://weather.noaa.gov/cgi-bin/mgettaf.pl" METHOD="POST">
+                      <div align="center"><p align="center"><font face="Arial" size="2">&nbsp;
+                        </font><b><font face="Arial" size="3">TAF reports<br>
+                        </font></b><font face="Arial" size="1"><input SIZE="12" NAME="cccc"><input TYPE="SUBMIT" VALUE="Go">
+                        <br>
+                        <a href="#tafinfo"><font color="#0000FF">TAF Explained</font></a>
+                        </font></p>
+                      </div>
+                    </form>
+      
+<p align="left"><b><font face="Arial" size="3">N. America Surface
+      Analysis.&nbsp;</font></b><font size="2" face="Arial">  </font><i><font color="#000000" face="Arial" size="1">(400k)</font><font color="#FF0000">&nbsp;</font></i><i><font face="Arial" size="2" color="#FF0000">&nbsp;&nbsp;</font></i><a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc00wbg.gif"><font face="Arial" size="2" color="#0000FF">00Z</font></a><font face="Arial" size="2">&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc03wbg.gif"><font color="#0000FF">03Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc06wbg.gif"><font color="#0000FF">06Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc09wbg.gif"><font color="#0000FF">09Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc12wbg.gif"><font color="#0000FF">12Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc15wbg.gif"><font color="#0000FF">15Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc18wbg.gif"><font color="#0000FF">18Z</font></a>&nbsp;&nbsp;
+<a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc21wbg.gif"><font color="#0000FF">21Z</font></a>&nbsp;&nbsp;
+      (<a href="http://www.hpc.ncep.noaa.gov/html/stationplot.shtml"><font color="#0000FF">legend</font></a>)&nbsp;&nbsp;<i>(timestamp in lower left corner of each image)</i></font>
+      
+<p align="left"><b><font face="Arial" size="3">Prognosis&nbsp; Charts:</font></b>
+      <ul>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/92fwbg.gif"><font face="Arial" size="2" color="#0000FF"><b>12-h
+          forecast valid 00 or 12z</b></font></a>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/92fwbga.gif"><font face="Arial" size="2" color="#0000FF"><b>12-h
+          forecast valid 06 or 18z</b></font></a>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/94fwbg.gif"><font face="Arial" size="2" color="#0000FF"><b>24-h
+          forecast valid 00 or 12z</b></font></a>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/94fwbga.gif"><font face="Arial" size="2" color="#0000FF"><b>24-h
+          forecast valid 06 or 18z</b></font></a>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/96fwbg.gif"><font face="Arial" size="2" color="#0000FF"><b>36-h
+          forecast valid 00 or 12z</b></font></a>
+        <li>
+          <p align="left"><a href="http://www.hpc.ncep.noaa.gov/basicwx/98fwbg.gif"><font face="Arial" size="2" color="#0000FF"><b>48-h
+          forecast valid 00 or 12z</b></font></a></li>
+        <li>
+          <p align="left"><b>
+          <a href="http://www.hpc.ncep.noaa.gov/basicwx/day0-7loop.html"><font face="Arial" size="2" color="#0000FF">Loop of
+          sea-level pressures and fronts through day 7</font></a><font face="Arial" size="2" color="#0000FF">&nbsp;</font></b></li>
+      </ul>
+<blockquote>
+  <p align="left"><font face="Arial" size="2"><b>Legend for <a href="http://www.hpc.ncep.noaa.gov/html/fntcodes2.shtml"><font color="#0000FF">Surface
+  Fronts</font></a> and <a href="http://www.hpc.ncep.noaa.gov/html/stationplot.shtml"><font color="#0000FF">Wx
+  Symbols</font></a></b></font>
+  </blockquote>
+<p><b><font face="Arial" size="3"><a href="http://www.spc.noaa.gov/products/outlook/"><font color="#0000EE">Storm
+      Prediction Center (NWS) Convective Outlook</font></a></font></b>
+
+</td>
+  </tr>
+</table>
+<p align="center"><img border="1" src="http://www.duats.com/graphics/graphics/uswxdpct.gif" width="640" height="480"></p>
+<p align="center">
+<a href="http://wwwa.accuweather.com/radar-large.asp?partner=accuweather&myadc=0&traveler=0&zipcode=&level=national&site=US_&type=SIR&anim=loop">
+<img border="0" src="http://sirocco.accuweather.com/nx_mosaic_640x480c/SIR/inmaSIRUS_.gif" width="640" height="480"></a></p>
+<p align="center"><b>Click any image 
+below for enlarged <font color="#FF0000">looping</font> map</font></b><br>
+<a href="http://www.duats.com/graphics/reg04loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg04.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg03loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg03.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg02loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg02.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg01loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg01.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg00loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg00.gif" width="100" height="75"></a><a href="http://www.duats.com/graphics/graphics/xnxreg00.gif"><br>
+</a><a href="http://www.duats.com/graphics/reg09loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg09.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg08loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg08.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg07loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg07.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg06loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg06.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg05loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg05.gif" width="100" height="75"></a><a href="http://www.duats.com/graphics/graphics/xnxreg05.gif"><br>
+</a><a href="http://www.duats.com/graphics/reg14loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg14.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg13loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg13.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg12loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg12.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg11loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg11.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg10loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg10.gif" width="100" height="75"></a><a href="http://www.duats.com/graphics/graphics/xnxreg10.gif"><br>
+</a><a href="http://www.duats.com/graphics/reg19loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg19.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg18loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg18.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg17loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg17.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg16loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg16.gif" width="100" height="75"></a>&nbsp;&nbsp;
+<a href="http://www.duats.com/graphics/reg15loop.html"><img border="0" src="http://www.duats.com/graphics/graphics/xnxreg15.gif" width="100" height="74"></a></p>
+<p align="center"><font face="Arial" size="1">c l i c k&nbsp;&nbsp; i m a g
+e&nbsp;&nbsp; f o r&nbsp;&nbsp; 6&nbsp; h r&nbsp;&nbsp;&nbsp; l o o p</font><a href="http://weather.noaa.gov/radar/mosaic.loop/DS.p19r0/ar.us.conus.shtml"><br>
+</a><a href="http://radar.weather.gov/Conus/index_lite.php">
+<img border="3" src="http://www.duats.com/graphics/graphics/natrad.gif" width="640" height="480" alt="Click this image for a 6 hr loop."></a></p>
+
+<p align="center">
+<img border="0" src="http://adds.aviationweather.gov/data/airmets/airmets_ALL.gif" width="680" height="680"></p>
+<p align="center"><a href="http://radar.weather.gov/ridge/Conus/full.php">
+<img border="2" src="http://radar.weather.gov/Conus/Loop/NatLoop_Small.gif" ></a><br>
+<font face="Arial" size="1">click image for 3400x1700 pixel image (will loop)</font></p>
+<h2 class="style1"><a href="http://www.aviationweather.gov">Aviationweather.gov
+</a>
+</h2>
+<p align="center"><a href="http://www.aviationweather.gov/">
+<img border="1" src="http://aviationweather.gov/data/front/front_page_sat_2color.gif" ></a></p>
+<p align="center"><a href="http://www.aviationweather.gov/">
+<img border="0" src="http://aviationweather.gov/data/front/front_page_sat.gif"></a></p>
+<p align="center">
+<a href="http://www.duats.com/graphics/vissat2x.html">
+<img border="0" src="http://www.duats.com/graphics/graphics/vissat.gif" ></a></p>
+<p align="center"><a href="http://www.duats.com/graphics/irsat2x.html">
+<img border="1" src="http://www.duats.com/graphics/graphics/irsat.gif"></a></p>
+<p align="center"><br>
+<b><font face="Arial" size="6"><a name="winds"></a>Winds at Various Levels</font></b><br>
+<img border="0" src="http://adds.aviationweather.gov/data/winds/ruc00hr_sfc_wind.gif" width="680" height="680"><br>
+<img border="1" src="http://adds.aviationweather.gov/data/winds/ruc00hr_900_wind.gif" width="680" height="680"><br>
+<b><font face="Arial" size="3">
+<img border="0" src="http://adds.aviationweather.gov/data/winds/ruc00hr_800_wind.gif" width="680" height="680"><br>
+<img border="0" src="http://adds.aviationweather.gov/data/winds/ruc00hr_725_wind.gif" width="680" height="680"><br>
+<img border="0" src="http://adds.aviationweather.gov/data/winds/ruc00hr_650_wind.gif" width="680" height="680"><br>
+<br>
+</font></b><font face="Arial" size="3"><b>
+<a href="http://adds.aviationweather.gov/winds/"><font color="#0000EE">Wind/Temps
+at Different Levels/Times</font></a></b></font></p>
+<p align="center">&nbsp;</p>
+
+<p align="left"><font face="Arial" size="2"><b><u><a name="tafinfo"></a>TAF
+Forecast Example Decoded:</u></b></font>
+      
+</p>
+
+<table border="1" width="100%" cellspacing="0">
+  <tr>
+    <td width="36%" valign="top">
+      <pre><font size="2">
+KDFW 301350Z 301412 <font color="#0000FF">020</font><font color="#FF0000">08KT</font> <font color="#800080">2SM</font> <font color="#00FF00">BR</font> <font color="#800000">OVC004</font>
+      <font color="#0000FF">TEMPO 1415</font> <font color="#FF0000">1/4SM</font> <font color="#800080">FG</font> OVC001
+     FM1500 02007KT P6SM OVC010
+     FM1800 35013KT P6SM OVC025
+     FM0000 36010KT P6SM OVC012</font></pre>
+    </td>
+    <td width="64%" valign="top">
+      <pre><font size="2" color="#000000"><i>Dallas/Ft.Worth airport report generated on the 30th at 1350GMT...</i></font><font size="2"><font color="#0000FF">
+Winds 020</font> <font color="#FF0000">at 08knots</font> <font color="#800080">visibility 2 statute miles</font> <font color="#00FF00">Mist</font> <font color="#800000">Overcast at 400 ft.</font>
+<font color="#0000FF">Temporarily between 1400GMT and 1500GMT</font><font color="#000000"> </font><font color="#FF0000">visibility 1/4 mile</font><font color="#000000"> </font><font color="#800080">FOG</font><font color="#000000"> Overcast 100ft.</font>
+From 1500GMT winds 020 at 7 knots visibility greater than 6 miles overcast 1,000ft
+From 1800GMT winds 350 at 13 kts visibility greater than 6 miles overcast 2,500ft
+From 0000GMT winds 360 at 10 kts vis. &gt; 6 miles overcast 1,200</font></pre>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+  <tr>
+    <td width="20%" valign="top">
+      <pre>Qualifiers of 
+<u>Intensity or Proximity</u>
+<b><font size="3">-</font></b> Light 
+Moderate (no qualifier) 
+<b><font size="3">+</font></b> Heavy or well-developed 
+<b>VC</b> in the Vicinity </pre>
+    </td>
+    <td width="20%" valign="top"><font face="Courier" size="2"><u>Qualifier Descriptor</u><br>
+      <b>MI</b> Shallow<br>
+      <b>BC</b>  Patches<br>
+      <b>DR</b> Low Drifting<br>
+      <b>BL</b> Blowing<br>
+      <b>SH</b> Showers<br>
+      <b>TS</b> Thunderstorm<br>
+      <b>FZ</b> Freezing<br>
+      <b>PR</b> Partial</font></td>
+    <td width="20%" valign="top"><font face="Courier" size="2"><u>Precipitation</u><br>
+      <b>DZ</b> Drizzle<br>
+      <b>RA</b> Rain<br>
+      <b>SN</b> Snow<br>
+      <b>SG</b> Snow Grains<br>
+      <b>IC</b> Ice Crystals<br>
+      <b>PL</b> Ice Pellets<br>
+      <b>GR</b> Hail<br>
+      <b>GS</b> Small Hail or Snow Pellets (less than 1/4 inch in diameter)<br>
+      <b>UP</b> Unknown precipitation (automated stations only)</font></td>
+    <td width="20%" valign="top"><font face="Courier" size="2"><u>Obscuration</u><br>
+      <b>BR</b> Mist (Foggy conditions with visibilities greater than 5/8 statute mile)<br>
+      <b>FG</b> Fog (visibility 5/8 statute mile or less)<br>
+      <b>FU</b> Smoke<br>
+      <b>DU</b> Dust<br>
+      <b>SA</b> Sand<br>
+      <b>HZ</b> Haze<br>
+      <b>PY</b> Spray<br>
+      <b>VA</b> Volcanic Ash</font></td>
+    <td width="20%" valign="top"><font face="Courier" size="2"><u>Other</u><br>
+      <b>PO</b> Well-Developed Dust/Sand Whirls<br>
+      <b>SQ</b> Squalls<br>
+      <b>FC</b> Funnel Cloud<br>
+      <b>+FC</b> Well-Developed Funnel Cloud, Tornado or Waterspout<br>
+      <b>SS</b> Sandstorm<br>
+      <b>DS</b> Duststorm</font></td>
+  </tr>
+</table>
+      <p><font face="Verdana" size="1"><b>A Discussion of TAF Cycles </b><i>(from
+      http://weather.noaa.gov/weather/taf.shtml)</i><br>
+      In the U.S., TAFs are produced four times a day starting at approximately
+      30 minutes before each main synoptic hour (00Z, 06Z, 12Z, and 18Z). All
+      the forecasts produced starting one hour before the main synoptic hour up
+      to four hours past the main synoptic hour are considered to be for the
+      same cycle. For example, forecasts produced between 1100Z and 1600Z are
+      all considered to be 12Z forecastss. In reality, forecasts contain the
+      starting and ending times for which the forecast is valid. Our rule of
+      thumb is that all forecasts produced between (hh-1)00Z to (hh+4)44Z are
+      considered to be for the hh cycle. The following table summarizes the
+      relationship between forecast production time and cycle:</font></p>
+<div align="left">
+<table cellPadding="2" border="1" VALIGN="MIDDLE" bordercolor="#C0C0C0" cellSpacing="0">
+  <tbody>
+    <tr vAlign="center" align="middle">
+      <td rowSpan="2"><font face="Verdana" size="1">Forecast<br>
+        Cycle</font></td>
+      <td colSpan="2"><font face="Verdana" size="1">Forecast<br>
+        Production<br>
+        Range</font></td>
+    </tr>
+    <tr vAlign="center" align="middle">
+      <td><font face="Verdana" size="1">From</font></td>
+      <td><font face="Verdana" size="1">To</font></td>
+    </tr>
+    <tr vAlign="center" align="middle">
+      <td><font face="Verdana" size="1">00Z</font></td>
+      <td vAlign="center" align="middle"><font face="Verdana" size="1">2300</font></td>
+      <td vAlign="center" align="middle"><font face="Verdana" size="1">0459</font></td>
+    </tr>
+    <tr vAlign="center" align="middle">
+      <td><font face="Verdana" size="1">06Z</font></td>
+      <td><font face="Verdana" size="1">0500</font></td>
+      <td><font face="Verdana" size="1">1059</font></td>
+    </tr>
+    <tr vAlign="center" align="middle">
+      <td><font face="Verdana" size="1">12Z</font></td>
+      <td><font face="Verdana" size="1">1100</font></td>
+      <td><font face="Verdana" size="1">1659</font></td>
+    </tr>
+    <tr vAlign="center" align="middle">
+      <td><font face="Verdana" size="1">18Z</font></td>
+      <td><font face="Verdana" size="1">1700</font></td>
+      <td><font face="Verdana" size="1">2259</font></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

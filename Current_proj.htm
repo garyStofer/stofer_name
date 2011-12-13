@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- #BeginEditable "doctitle" -->
+<title>Home</title>
+<style type="text/css">
+.pic_style1 {
+	margin-left: 12px;
+}
+.style2 {
+	margin-right: 14px;
+	margin-top: 6px;
+	margin-bottom: 0px;
+}
+</style>
+<!-- #EndEditable -->
+<link href="Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead"> 
+		<img alt="The need for speed" src="images/RV-Heading.jpg" width="900" height="125" />
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul id="navigation_list">
+			<li><a href="index.htm">Home</a></li>
+			<li><a href="SW_proj.htm">Software projects</a></li>
+			<li><a href="HW_proj.htm">Hardware projects</a></li>
+			<li><a href="PWS.htm">Weather Stations</a> </li>
+			<li><a href="Current_proj.htm">Fluid Sensor</a></li>
+			<li><a href="QCproj.htm">Quadra Copter</a></li>
+			<li></li>
+
+			<li><a href="AV_proj.htm">Aircraft projects</a></li>
+			<li><a href="weather.htm">Aviation Weather </a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a href="resume.htm">Resume</a></li>
+			<li><a href="contact.htm">Contact</a></li>
+
+	 		<!--<a href="http://64.85.240.249/">Home Automation </a>-->
+		</ul>
+	</div>
+	<div id="content" >
+		<!-- #BeginEditable "content" -->
+		
+		<div id="Scroll" >
+		
+		<h4>Capacitive fluid level sensor</h4>
+		<p>This side project got started out of a need to come up with a better 
+		fuel level sensor for my vintage aircraft. In 1947 when the aircraft was 
+		built, it used to have a simple float and wire-wound rheostat sensor 
+		mounted in the bottom of the 6&quot; tall tanks. The original sensors wore 
+		out long ago and are no longer available.</p>
+		<p style="height: 267px"><img alt="Old style sensor" src="images/CIMG1314.jpg" width="300" height="225" class="style2" style="float: left" />While 
+		replacement sensors from the automotive world will fit mechanically they 
+		are not a good choice because they are meant to be mounted from the top. 
+		Using them means that a empty tank would read full on the gauge and visa 
+		versa, not generally a good thing !</p>
+		<p style="height: 258px">
+		<img src="images/CIMG1800.jpg" width="220" height="239" class="pic_style1" />I choose a capacitive measuring approach as it is not sensitive to 
+		the direction of mounting and has no mechanical parts to wear out.&nbsp; 
+		The element consists of two concentric cups in which the fuel acts as 
+		the dielectric material. The capacitance of the element changes in 
+		direct proportion to the height of the wetted area between 30 and 60 pf.
+		</p>
+		<p>The electronics consist of a 555 timer, a TI MSP430 and a FET. The 
+		timer provides the oscillator, the TI controller counts the resulting 
+		frequency and applies compensation and calibration factors, then 
+		converts the result into a PW modulated signal to drive the FET output 
+		stage. The output hooks to a regular 30-240 Ohm analog gauge on the 
+		panel.&nbsp; </p>
+		</div>
+		
+		<!-- #EndEditable "content" -->
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin Content -->
+	<!-- End Content -->
+	
+	<!-- Begin Footer -->
+	<!-- End Footer -->
+	<div id="footer" >
+		<a href="index.htm">Home</a>&nbsp; <a href="contact.htm">
+		Contact</a>
+	</div>
+	</div> 
+<!-- End Container -->
+
+
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
