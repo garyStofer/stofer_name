@@ -5,7 +5,7 @@
 <meta name="GENERATOR" content="Microsoft FrontPage 12.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title>Aviation Weather Page</title>
-<SCRIPT Language="JavaScript">
+<SCRIPT type Language="JavaScript">
  function gmtClock(){
     time = new Date()
     gmtMS = time.getTime() + (time.getTimezoneOffset() * 60000)
@@ -16,8 +16,22 @@
     temp = "" + ((hour < 10) ? "0" : "") + hour
     temp += ((minute < 10) ? ":0" : ":") + minute
     temp += ((second < 10) ? ":0" : ":") + second
-    document.clockForm.digits.value = temp
+    document.clockForm.gmt_digits.value = temp
     setTimeout("gmtClock()",1000)
+    }  
+
+ function localClock(){
+    time = new Date()
+    locMS = time.getTime() 
+    locTime =  new Date(locMS)
+    hour = locTime.getHours()
+    minute = locTime.getMinutes()
+    second = locTime.getSeconds()
+    temp = "" + ((hour < 10) ? "0" : "") + hour
+    temp += ((minute < 10) ? ":0" : ":") + minute
+    temp += ((second < 10) ? ":0" : ":") + second
+    document.clockForm.local_digits.value = temp
+    setTimeout("localClock()",1000)
     }  
 
  </SCRIPT>
@@ -32,26 +46,46 @@
 
 </head>
 
-<body ONLOAD="gmtClock()" topmargin="2" leftmargin="2" bgcolor="#FFFFcc">
+<body ONLOAD="gmtClock(),localClock()" topmargin="2" leftmargin="2" bgcolor="#FFFFcc">
 
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="200pt" valign="top" height="121"><br>
+    <td valign="top" height="121" style="width: 243px"><br>
     <h1>USA Weather</h1><br>
 	</td>
     
-    <td align="center" style="width: 120pt">
+    <td align="center" style="width: 10%">
       	<FORM NAME="clockForm">
  		<h3> GMT</h3>
- 		<INPUT TYPE="text" NAME="digits" SIZE=8>
+ 		<INPUT TYPE="text" NAME="gmt_digits" SIZE=8>
+ 		<h3> PDT/PST</h3>
+ 		<INPUT TYPE="text" NAME="local_digits" SIZE=8>
+
  		<br>
  		</FORM>
- 	<td align="left" style="width: 60%">Example:
+ 	<td align="left" style="width: 46%">Example: PDT = GMT-7,&nbsp; PST = GMT-8
  	<p>
  	<strong>00:00 GMT</strong> is 17:00 PDT,&nbsp; 18:00 MDT,&nbsp; 9:00 CDT&nbsp; on <strong>previous</strong> day<br>
  	<strong>12:00 GMT</strong> is 05:00 PDT,&nbsp; 06:00 MDT,&nbsp; 07:00 CDT on same day<br>
+ 	<strong>16:00 GMT</strong> is 09:00 PDT,&nbsp; 10:00 MDT,&nbsp; 11:00 CDT on same day<br>
  	</p>
- 	</td>	
+ 	</td>
+ 	<td align="left" style="width: 40%">METARs and TAFs by NOAA ADDS
+ 	<p>
+ 	 	 <a href="http://www.aviationweather.gov/adds/metars/?station_ids=KRBL&std_trans=translated&chk_metars=on&hoursStr=most+recent+only&chk_tafs=on&submitmet=Submit">
+			Red Bluff, CA </a> <br>
+ 	<a href="http://www.aviationweather.gov/adds/tafs/?station_ids=KSUU&amp;std_trans=translated&amp;submit_both=Get+TAFs+and+METARs">
+			Travis AFB</a><br>
+	<a href="http://www.aviationweather.gov/adds/tafs/">By Station Identifier</a>&nbsp;
+			<a href="http://tfr.faa.gov/tfr_map_ims/html/ns/scale2/tile_1_2.html"> <br>
+			FAA TFR page</a>,&nbsp; <a href="http://www.tfrcheck.com/">TFRCheck 
+			page</a></p>
+	<p>
+ 	 	 &nbsp;</p>
+ 	</td>
+ 
+
+ 		
   </tr>
 </table>
 <hr>
@@ -59,22 +93,15 @@
 <img src="images/bluespacer.gif" width="2" height="130" border="0"><img src="images/bluespacer.gif" width="2" height="130" border="0">
 <object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
 <img src="images/bluespacer.gif" width="2" height="130" border="0">
-<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object><hr>
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+<img src="images/bluespacer.gif" width="2" height="130" border="0">
+<object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=MCRGC1&freq=&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=MCRGC1&freq=&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
+<hr>
+
+
 <table border="0" width="23%" align="left">
   <tr>
     <td width="100%">
-<p>Current Weather observations:</p>
-<p>
-      <b><font face="Arial" size="2" color="#FF0000">
-      	NOAA ADDS:
-		<a href="http://adds.aviationweather.gov/metars/java/">METAR</a>&nbsp;
-		<a href="http://adds.aviationweather.gov/tafs/java/">TAF</a><br/>
-     	NOAA METAR/RAWS:
-     	<a href="http://www.wrh.noaa.gov/zoa/mwmap2.php?map=zoa">ZOA</a>
-		<a href="http://www.wrh.noaa.gov/zoa/mwmap3.php?map=usa">USA</a>
-		</font></b>
-		<hr>
-		</p>
 <p align="center">
 		Now:<br/>
 		<a href="http://www.duats.com/graphics/graphics/sfwxcur.gif">
@@ -129,26 +156,6 @@ below for detailed plot<br>
 </i>This map and much more information can be found on the excellent <a href="http://adds.aviationweather.gov/"><font color="#0000FF">ADDS
 site</font></a>.</font>
 
-<p align="center">
-                    
-
-      <form ACTION="http://weather.noaa.gov/cgi-bin/mgetmetar.pl" METHOD="POST">
-                      <div align="center"><p align="center"><b><font face="Arial" size="3">
-                        &nbsp;METAR reports<br>
-                        </font></b><font face="Arial" size="1"><input SIZE="12" NAME="cccc"><input TYPE="SUBMIT" VALUE="Go"></font></p>
-                      </div>
-                    </form>
-
-                    <form ACTION="http://weather.noaa.gov/cgi-bin/mgettaf.pl" METHOD="POST">
-                      <div align="center"><p align="center"><font face="Arial" size="2">&nbsp;
-                        </font><b><font face="Arial" size="3">TAF reports<br>
-                        </font></b><font face="Arial" size="1"><input SIZE="12" NAME="cccc"><input TYPE="SUBMIT" VALUE="Go">
-                        <br>
-                        <a href="#tafinfo"><font color="#0000FF">TAF Explained</font></a>
-                        </font></p>
-                      </div>
-                    </form>
-      
 <p align="left"><b><font face="Arial" size="3">N. America Surface
       Analysis.&nbsp;</font></b><font size="2" face="Arial">  </font><i><font color="#000000" face="Arial" size="1">(400k)</font><font color="#FF0000">&nbsp;</font></i><i><font face="Arial" size="2" color="#FF0000">&nbsp;&nbsp;</font></i><a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc00wbg.gif"><font face="Arial" size="2" color="#0000FF">00Z</font></a><font face="Arial" size="2">&nbsp;&nbsp;
 <a href="http://www.hpc.ncep.noaa.gov/sfc/lrgnamsfc03wbg.gif"><font color="#0000FF">03Z</font></a>&nbsp;&nbsp;

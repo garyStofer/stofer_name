@@ -7,6 +7,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- #BeginEditable "doctitle" -->
 <title>Home</title>
+<style type="text/css">
+.style1 {
+	border-width: 3px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.style2 {
+	border-width: 4px;
+	margin: 14px 12px;
+	float:left;
+}
+.style5 {
+	margin-bottom: 19px;
+}
+.style6 {
+	margin-right: 16px;
+	margin-bottom: 19px;
+}
+</style>
 <!-- #EndEditable -->
 <link href="Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,8 +49,7 @@
 			<li><a href="Current_proj.htm">Fluid Sensor</a></li>
 			<li><a href="QCproj.htm">Quadra Copter</a></li>
 			<li></li>
-
-			<li><a href="AV_proj.htm">Aircraft projects</a></li>
+			<li><a href="MC_proj.htm">Motorcycle projects</a></li>
 			<li><a href="weather.htm">Aviation Weather </a></li>
 			<li></li>
 			<li></li>
@@ -52,7 +70,7 @@
 			<li></li>
 			<li></li>
 			<li></li>
-			<li></li>
+			<li><a href="Repairs.htm">PCB/Assembly repair</a></li>
 			<li><a href="resume.htm">Resume</a></li>
 			<li><a href="contact.htm">Contact</a></li>
 
@@ -63,67 +81,163 @@
 		<!-- #BeginEditable "content" -->
 		
 <div id="Scroll" >
-<h1><span class="pic_style1">Weather Stations </span> <br /> </h1>
-Custom PIC based station with Temp and Wind data updating every 15 seconds.<br />
+<h1><span class="pic_style1">Personal Weather Stations (PWS)</span><br /> </h1>
+Custom high resolution weather station hardware with Rapid-Fire update 
+directly to Weather Underground.<br />
 <br />
 <object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACONCO18&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <object width="290" height="130"><param name="movie" value="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" /><embed src="http://www.wunderground.com/swf/pws_mini_rf_nc.swf?station=KCACORNI2&freq=2.5&units=english&lang=EN" type="application/x-shockwave-flash" width="290" height="130" /></object>
-<p>Click on the displays above to see charted station details. </p>
-<p>Click <a href="http://66.234.194.167/">here </a>to go to see the&nbsp;
-<a href="http://66.234.194.167/">local interface</a> of the device </p>
+<p>Click on the displays above to see charted station details.&nbsp; </p>
+<p class="style5">If you do not see any graphic above it&#39;s because your browser 
+doesn&#39;t do Flash.</p>
+<p>Click <a target="_blank" href="http://KCACONCO18.us.to">here </a>to go to see the&nbsp;
+<a target="_blank" href="http://KCACONCO18.us.to">local interface</a> of the device instead.</p>
+<p>For a full write up of the project go to
+<a target="_blank" href="http://WunderWeatherstation.wordpress.com">http://WunderWeatherstation.wordpress.com</a> </p>
 <hr/>
-<p> The wind sensors are all solid state using a hall effect devices instead of 
+<img alt="WX station sensor tree " src="wx_pix/IMG_Tree_Roof.gif" width="200"class="pic_style1" />
+<p> My weather stations are designed from the ground up for&nbsp; 
+high resolution and short interval sensor readings which then are directly fed into the 
+Rapid-Fire <a target="_blank" href="http://www.wunderground.com">Wunderground</a> data ingestion 
+and dissemination&nbsp; network at a rate down to once every 2 seconds.</p>
+<p> The units are self contained, web based and communicate via a WIFI link 
+directly with the internet. This is done without the need for a secondary 
+computer, additional software or separate box. The device runs on less than 5 Watts of power and 
+therefore provides a cost and energy efficient way of reporting weather 
+data in a continuous stream. </p>
+<p> Because the device is on a WIFI link the unit can be placed anywhere within 
+the range of your home&#39;s WIFI range. The only wiring required is a CAT5 cable to 
+the wind tree. Power is fed to both ends through a junction in this run which 
+can be placed where it is convenient.
+</p>
+
+<p> The wind sensors are of solid state design using magnetic sensors instead 
+of 
 reed relay switches and potentiometers as found in the commercially available 
-Davis Instrument weather stations.
+stations.
 </p>
-<p> For the anemometer&nbsp; a 14 pole magnet housing&nbsp; and a&nbsp; bipolar 
-Hall effect switch is used, giving 6 pulses per revolution. This in conjunction 
-with the ball bearings used allows&nbsp; the capturing of wind speeds down to 
-about 0.5Mph. The magnet / bearing assembly is actually a RC model&nbsp; DC 
-motor with it&#39;s iron armature removed to provide smooth action.&nbsp;
-	<img alt="WX station sensor tree " src="wx_pix/CIMG0719.JPG" width="280" height="210" class="pic_style1" /> 
-</p>
-<p> The wind vane is&nbsp; based on a magnetic rotary encoder which is made off 
-4 hall effect units, producing a pulse width modulated signal that&#39;s directly 
-proportional to the direction of magnetic flux over the device. The chosen 
-device has a resolution of 1.4 deg (8 bits) , more than enough for wind 
-direction. The vane is mounted in a roller bearing and also reacts to wind less 
-than 1 Mph. as long as the bearings stay clean of corrosion and debris.&nbsp; 
-Time will tell !</p>
-<p> The 3rd device&nbsp; on the sensor&nbsp; tree is a CIGS solar panel that 
-measures the solar radiation during the day. I find this information useful as 
-it indirectly shows cloud cover along with sunrise and sunset.&nbsp;
-</p>
-<p> The Barometer sensor is mounted on the&nbsp; controller PCB. A standard&nbsp; pressure sensor from FreeScale, feeding an ADC input of the PIC, 
-is used.
-</p>
-<p> The Temperature sensor is an LM334 remote temperature probe which feeds 
-directly into an analog input of the PIC as well.
-</p>
-<p> Humidity is measured with a Honywell HIH4030 calibrated humidity sensor.
-</p>
-<p> The <a href="server.htm">controller board</a> is an SBC65 or SBC68 from an Australian company Modtronix. It has a PIC 18F1680 and a RTL8019 MAC.
- It&#39;s using the free TCIP/IP 
-stack from Microchip with extension to act as an HTTP client and server.
-</p>
-<p> The advantage of using an embedded device instead of a weather station / PC 
-combination is that this setup only uses about 3W to operate and is absolutely 
-quiet, and of course it is much more rewarding when you can say you made it 
-yourself.
-</p>
-<p>
-<hr/>
-<img src="wx_pix/CIMG2920.JPG" width="640" height="480" />
-<img src="wx_pix/CIMG2923.JPG" width="640" height="480" />
-<img src="wx_pix/CIMG2921.JPG" width="640" height="480"  />
-<img src="wx_pix/CIMG2922.JPG" width="640" height="480"  />&nbsp;
+
+
+<div style="clear: both;">
+<p> 
+<img src="wx_pix/IMG_Anemo.gif" class="style1" alt="Wind Anemometer" style="float: left" />For the 
+Anemometer,&nbsp;a ball bearing mounted 16 pole magnet housing&nbsp;and a&nbsp;hall effect 
+device is used, giving 8 pulses per revolution instead of a single pulse.&nbsp; 
+Using the above design makes it possible to have very little rotating mass and 
+virtually no drag or cogging on the rotating cups, which allows&nbsp;the capturing of wind speeds down to&nbsp; 0.5 Mph 
+and the proper measurement of gust and micro gusts in a 15 second capture 
+window. The Anemometer cups are calibrated cups from Davis Instruments.
 </p>
 </div>
 
 
-		<!-- #EndEditable "content" -->
-	</div>
+<div style="clear: both;">
+<p> 
+<img src="wx_pix/IMG_Vane.gif" style="float: left" class="style2" />The wind vane is&nbsp; based on a magnetic rotary encoder. 
+It producing a pulse width modulated signal that&#39;s directly proportional to the 
+direction of magnetic flux over the device. The chosen device has a resolution 
+of 1.4 deg (8 bits) , more than enough for wind direction. The vane is mounted 
+in a roller bearing and also reacts to wind less than 1 Mph. Due to the design 
+calibration of the wind vane is elegantly simple. Instead of having to orient 
+the entire&nbsp; wind tree on the mast with north one can simply mount the tree 
+in any direction on the roof or a mast, then face the wind vane to north and 
+learn &quot;North&quot; . You can do all of that with a few taps on your Smart Phone 
+standing on the roof using the compass app. The vane itself is from Davis 
+Instruments as well.&nbsp;&nbsp; </p>
+</div>
+
+
+<p> The 3rd device&nbsp; on the wind tree is a Solar Sensor that 
+measures the radiation during the day. I find this information useful as 
+it indirectly shows cloud cover along with sunrise and sunset.&nbsp; There is another solar sensor in the works which is a lot smaller and has no angular 
+sensitivity. It can be placed on the wind tree, at the base, or somewhere along 
+the run.&nbsp;&nbsp;
+</p>
+<p> <img src="wx_pix/IMG_Baro.gif" />The Barometer, Temperature and Humidity sensors are on a small separate PCB&nbsp; 
+a few inches away from the main board, so as not to be potentially affected by heat 
+generated on the main board. If&nbsp; desired the air data sensor can be moved 
+up to 8 feet away, however the standard configuration is 2-4&quot; below the main 
+board, housed in the base station post. Currently I have two versions of the air 
+data sensor, one using an HP03s barometer and the latest humidity sensor from 
+Honeywell, and the other version is using a Bosch BMP085 barometer and a Sensiron 
+SHT11 humidity device. All of the above sensors are now factory calibrated with 
+correction factors stored in non volatile memory of each sensor. I will probably 
+make a third version using the BOSH and the Honeywell sensors as the Sensiron 
+part is not always available at the vendors I use and is much more expensive and 
+the HP03s barometer is light sensitive.</p>
+<p> <img src="wx_pix/post1.jpg" width="81" height="215" />The main board and 
+it&#39;s local sensors (temp/hum/baro/light and possibly rain) are housed in a white 
+hollow post with air holes on the top and bottom. The interior of the post is 
+force aspirated by a fan near the base of the post so that a constant stream of 
+fresh air is flowing over the sensors. The post stands 2 feet tall and looks 
+nice in the yard or next to your house. If desired the post could be made as 
+short as 1 foot or as tall as 4.
+</p>
+<p> The main controller board is designed around a PIC device from Microchip and 
+their tried and tested TCP/IP/WIFI/ stack is used. The wireless access device is 
+by Zero-G (now Microchip) and is FCC approved. The RF module has a built in 
+antenna that in the vertical position is nearly perfectly Omni-directional, for 
+extra range there is an external antenna port that can be used with a rubber 
+ducky antenna or even a high gain yagi if need be.
+</p>
+<p> In addition to the weather station function the main board provides up to 8 
+digital inputs, 8 digital outputs and 4 analog signal inputs. This could be used 
+for example for alarm or control functions, the exact hardware details have not 
+yet been decided other than that they will be implemented as a daughter board, or in 
+Arduino speak, a Shield.
+</p>
+<p> 
+<img src="wx_pix/IMG_RF.gif" width="200" style="float: left" class="style6" />Since the unit is completely internet based there is no display on the main 
+board to look at and there are no&nbsp; buttons to press. There is however a USB 
+port and a switch to allow for network configuration of the device via a 
+computer since the configuration of a purely wireless device can be somewhat of 
+a catch 22 otherwise. The USB port, when connected to a computer, becomes a 
+virtual COM device, and during normal operation the station data is also 
+transmitted on that port.&nbsp; Once configured with the WIFI details, all 
+further configuration can be done via the HTML5 interface using any internet 
+browser. The current station status is displayed and updated at a 1 
+second interval on the main page of the web interface.
+</p>
+<p> There are no batteries of any kind in the system, so there is nothing to 
+replace in the middle of the winter when the snow is on the roof. Two of the 
+earlier prototype stations have been in continuous operation since 2008 and, 
+except for a flying spider attack on the wind tree, have performed without 
+trouble. </p>
+<p>
+If you have read all the way to here, you no doubt have noticed that I have not 
+mentioned a rain sensor. Well.... the first, and second attempt of making a <em>
+reliable</em> rain gauge has shown some problems over time.
+<img src="wx_pix/IMG_Bucket.gif" style="float: left" class="style6" />
+Mostly problems with plugging up the drain or inlet holes with debris, bugs or other green gunk. 
+After experimenting with P-trap/pressure sensor designs I&#39;m going back to a 
+simple teeter-totter device that mounts on-top of the post, or a secondary post.&nbsp; 
+I think that the rain gauge will need some attention and cleaning now and then 
+and I don&#39;t think I want to ever place it on the roof.</p>
+<p>
+
+Stopping by Home Depot the other day I was ambling along the garden isle when I 
+saw a self emptying tipping bucked rain gauge from AcuRite. The thing was on 
+sale for $19 since is a seasonal item here in CA. I had my doubts as to the "Acu" and "Rite" claim of it but, figured I can&#39;t go wrong at 
+that price. Hooked it up and ran a couple of calibrations on 
+it. Not bad for the price, even at the regular $30. It was a little bit off, 
+underreporting by about 20% but a turn on the calibration screws took care of 
+that.&nbsp; It seemed to be pretty consistent from one run to the other, so I 
+opened up the case and connected a cable to the reed switch inside. I&#39;m sure 
+it&#39;s not as precise as a Davis or RainWise bucket with a larger opening,&nbsp; but it looks nice and has a wireless display to put on 
+your chimney mantel.
+</p>
+<div style="float:left;clear: both;">
+<img src="wx_pix/IMG_Base_Baro.gif" alt="Base board , baro, hyg, sol sensor"> </img>
+<img src="wx_pix/IMG_ALL.gif" alt="All the components"></img>
+<img src="wx_pix/IMG_Stuby_open.gif" alt="Board inside post"></img>
+<img src="wx_pix/IMG_Fan.gif" alt="Fan inside post" width="640" height="480"></img>
+</div>
+
+</div>  <!-- end of scroll div -->
+
+	<!-- #EndEditable "content" -->
+	</div> <!-- this is end div content -->
 	<!-- End Navigation -->
 	<!-- Begin Content -->
 	<!-- End Content -->
@@ -131,8 +245,7 @@ yourself.
 	<!-- Begin Footer -->
 	<!-- End Footer -->
 	<div id="footer" >
-		<a href="index.htm">Home</a>&nbsp; <a href="contact.htm">
-		Contact</a>
+		<a href="contact.htm">Contact Info</a>
 	</div>
 	</div> 
 <!-- End Container -->
